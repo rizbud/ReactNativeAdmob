@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import {
   TouchableOpacity,
+  ToastAndroid,
   SafeAreaView,
   StyleSheet,
+  Platform,
   View,
   Text,
-  ToastAndroid,
 } from 'react-native';
 
 import {
@@ -15,7 +16,9 @@ import {
   RewardedAdEventType,
 } from '@react-native-firebase/admob';
 
-import Admob, {AdsId, interstitial, reward} from './admob';
+import {AdsId, interstitial, reward} from './admob';
+
+const {OS} = Platform;
 
 const Home = (props) => {
   const [intLoaded, setIntLoaded] = useState(false);
@@ -107,7 +110,10 @@ const Home = (props) => {
           <Text style={styles.label}>REWARD</Text>
         </TouchableOpacity>
       </View>
-      <BannerAd unitId={AdsId.banner} size={BannerAdSize.SMART_BANNER} />
+      <BannerAd
+        unitId={OS === 'ios' ? AdsId.ios.banner : AdsId.android.banner}
+        size={BannerAdSize.SMART_BANNER}
+      />
     </SafeAreaView>
   );
 };
