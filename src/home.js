@@ -1,13 +1,13 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import {
   TouchableOpacity,
-  ToastAndroid,
   SafeAreaView,
   StyleSheet,
   Platform,
   View,
   Text,
 } from 'react-native';
+import Toast from 'react-native-simple-toast';
 
 import {
   AdEventType,
@@ -69,9 +69,9 @@ const Home = (props) => {
             };
             show();
           } else {
-            ToastAndroid.show(
+            Toast.show(
               'Belum ada iklan yang tersedia. Coba beberapa saat lagi!',
-              ToastAndroid.SHORT,
+              Toast.SHORT,
             );
           }
           break;
@@ -83,9 +83,9 @@ const Home = (props) => {
             };
             show();
           } else {
-            ToastAndroid.show(
+            Toast.show(
               'Belum ada iklan yang tersedia. Coba beberapa saat lagi!',
-              ToastAndroid.SHORT,
+              Toast.SHORT,
             );
           }
           break;
@@ -99,7 +99,7 @@ const Home = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Admob Test</Text>
+        <Text style={styles.title}>React Native Admob</Text>
         <Text style={styles.point}>My Point: {point}</Text>
         <TouchableOpacity onPress={() => handleAds('int')} style={styles.btn}>
           <Text style={styles.label}>INTERSTITIAL</Text>
@@ -128,7 +128,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: '5%',
     paddingVertical: '3%',
-    borderWidth: 1,
   },
   title: {
     fontSize: 20,
