@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103683028827",
+    "project_id": "react-native-admob-77c03",
+    "storage_bucket": "react-native-admob-77c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103683028827:android:c421331dce7ce12a6f4c7e",
+        "android_client_info": {
+          "package_name": "com.reactnativeadmob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103683028827-hrcv4tghnk56mp99qlmumpahrcrv5638.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkrh4oJDJqtVqMmWHbAoG08hsO9kN4Ehc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103683028827-hrcv4tghnk56mp99qlmumpahrcrv5638.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
